@@ -51,3 +51,39 @@ User Interface Design: Assess how easy and pleasant the website is to use.
 Responsiveness: Test if the website looks and works well on different devices and browsers.
 Data Handling: Make sure user input is handled properly and errors are displayed correctly.
 Code Quality: Evaluate how well the code is written and organized.
+
+Explaination of code
+1. **HTML Structure (index.html):**
+   - This part defines the structure of the webpage.
+   - It includes a table to display CVE records and a modal for adding/editing CVE records.
+   - Also, there's a button to add new CVE records.
+
+2. **CSS Styling (styles.css):**
+   - This section contains styles to make the webpage visually appealing.
+   - It styles the table, modal, and buttons for better presentation.
+
+3. **JavaScript Logic (script.js):**
+   - This part contains the JavaScript code responsible for adding functionality to the webpage.
+   - It starts by waiting for the DOMContentLoaded event, ensuring that the DOM (Document Object Model) has been fully loaded before executing any JavaScript code.
+
+4. **Event Listeners:**
+   - It attaches event listeners to various elements like the "Add CVE" button, close button in the modal, cancel button in the modal, and the form submission event.
+   - When the "Add CVE" button is clicked, the openModal function is called, which displays the modal for adding a new CVE record.
+   - Similarly, when the close button or cancel button in the modal is clicked, the closeModal function is called to close the modal.
+   - When the form is submitted (either for adding or editing a CVE record), the handleSubmit function is called to handle the form submission.
+
+5. **Displaying CVE Records:**
+   - The displayCVEs function is responsible for displaying the CVE records in the table.
+   - It loops through the array of dummy CVE data and dynamically creates table rows for each record, populating them with the CVE details.
+   - Edit and delete buttons are added to each row to allow users to edit or delete individual records.
+
+6. **Modal Functionality:**
+   - The openModal and closeModal functions control the visibility of the modal for adding/editing CVE records.
+   - When the modal is opened, it displays the form for adding/editing CVE details.
+   - When the modal is closed, it hides the modal from the view.
+
+7. **Form Submission Handling:**
+   - The handleSubmit function is called when the form is submitted.
+   - This function prevents the default form submission behavior (which would refresh the page) and performs any necessary actions, such as saving the CVE record.
+
+Overall, this code sets up a basic frontend application for managing CVE records, including functionalities for viewing, adding, editing, and deleting records. It uses HTML for structure, CSS for styling, and JavaScript for interactivity. The dummy data provided in the JavaScript file is used for demonstration purposes.
