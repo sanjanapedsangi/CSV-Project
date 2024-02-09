@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CVE Database</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>CVE Database</h1>
+
+  <!-- Table to display CVE records -->
+  <table id="cveTable">
+    <thead>
+      <tr>
+        <th>CVE-ID</th>
+        <th>Severity</th>
+        <th>CVSS</th>
+        <th>Affected Packages</th>
+        <th>CWE-ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- CVE records will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <!-- Modal for adding/editing CVE records -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Add/Edit CVE Record</h2>
+      <form id="cveForm">
+        <label for="cveId">CVE-ID:</label>
+        <input type="text" id="cveId" required>
+        <label for="severity">Severity:</label>
+        <input type="text" id="severity" required>
+        <label for="cvss">CVSS:</label>
+        <input type="text" id="cvss" required>
+        <label for="affectedPackages">Affected Packages:</label>
+        <input type="text" id="affectedPackages" required>
+        <label for="cweId">CWE-ID:</label>
+        <input type="text" id="cweId" required>
+        <button type="submit">Save</button>
+        <button type="button" class="cancel">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="addCveBtn">Add CVE</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
